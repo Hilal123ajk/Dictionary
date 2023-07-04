@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="images/dictionary.png" type="image/x-icon">
+
+    <title>English Dictionary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google fonts  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@600&display=swap');
+
+        
+    </style>
+</head>
+<body>
+    <div class="container w-full md:w-1/2 mx-auto py-5">
+        
+        <form action="" class="flex justify-around items-center relative">
+            <input id="input" style="font-family: 'Wix Madefor Display', sans-serif;" type="text" name="search" placeholder="hello" autocomplete="off" class="w-11/12 py-3 px-3 bg-gray-50 text-black rounded-md hover:outline-none hover:border-none border-none focus:outline-none" required>
+
+            <img id="searchBtn" class="w-8 h-8 absolute left-3/4 cursor-pointer" src="images/search-icon.png" alt="search-icon">
+        </form>
+
+        <div class="word my-3 w-11/12 mx-auto">
+            <!-- Word and sound -->
+            <div class=" flex justify-between items-center">
+                <div>
+                    <h1 id="word" style="font-family: 'Wix Madefor Display', sans-serif;" class="text-4xl font-bold">hello</h1>
+                    <p id="phonetic" class="text-purple-400">/həˈləʊ/</p>
+                </div>
+
+                <div>
+                    <img src="images/play-icon.png" onclick="playSound()" class="w-10 h-10 cursor-pointer" alt="play-icon">
+
+                    <audio id="myAudio">
+                        <source src="https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                  
+            </div>
+
+        </div>
+
+        <div class="my-4 w-11/12 mx-auto">
+            <p class="text-lg">meaning</p>
+            <hr>
+        </div>
+
+        <div class="meaning my-4 w-11/12 mx-auto">
+            <ul>
+                <li id="meaning" class="list-disc ml-10 my-2">used as a greeting or to begin a phone conversation.</li>
+                <li  class="list-disc ml-10 my-2">example: <span id="example" class="text-gray-600">hello there, Katie!</span></li>
+            </ul>
+        </div>
+
+        <!-- Verb Section  -->
+
+        <div class="my-4 w-11/12 mx-auto">
+            <p class="text-lg">verb</p>
+            <hr>
+        </div>
+
+        <div class="meaning my-4 w-11/12 mx-auto">
+            <ul>
+                <li id="verb" class="list-disc ml-10 my-2">say or shout ‘hello’.</li>
+            </ul>
+        </div>
+
+        <div class="user-guide mt-14 my-4 w-11/12 mx-auto">
+            <h2 class="text-2xl font-bold">Guide</h2>
+            <p class="mt-2 text-green-700">It's a demo dictionary for searching words. It may not show results if the word is not found, and sometimes non-verb. Thank you.</p>
+          </div>
+          
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
